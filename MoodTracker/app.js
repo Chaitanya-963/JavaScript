@@ -98,10 +98,10 @@ emojis.forEach((item) => {
     "flex-col",
     "items-center",
     "gap-1",
-    "py-3",
+    "py-2",
     "px-4",
     "rounded-lg",
-    "text-4xl",
+    "text-2xl",
     "md:text-5xl",
     "hover:scale-110",
     "transition",
@@ -114,7 +114,7 @@ emojis.forEach((item) => {
   // Title
   const emojiTitle = document.createElement("span");
   emojiTitle.textContent = item.title;
-  emojiTitle.classList.add("text-lg", "font-semibold", "text-black");
+  emojiTitle.classList.add("text-sm","md:text-lg", "font-semibold", "text-black");
 
   emojiBox.appendChild(emojiSymbol);
   emojiBox.appendChild(emojiTitle);
