@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mood Tracker</title>
+</head>
+
+<body class="p-6 md:p-8 bg-gradient-to-r from-[#fcf8ff] to-[#ffffff]">
+
+    <h1 class="text-4xl md:text-7xl font-bold text-amber-500 mb-6 text-center">
+        Mood Tracker
+    </h1>
+
+    <div class="flex flex-col lg:flex-row justify-center items-start gap-10">
+
+        <!-- LEFT SIDE -->
+        <div class="w-full lg:w-[35vw] flex flex-col items-center gap-4 py-5 px-4 shadow-lg rounded-3xl border border-gray-100">
+            <h2 class="text-2xl md:text-3xl font-bold text-center">What is your mood today?</h2>
+
+            <div class="emojiContainer grid grid-cols-3 gap-6 md:gap-12 p-5 w-full"></div>
+
+            <textarea id="description" rows="4" placeholder="What happened today..."
+                class="rounded-lg border bg-white border-gray-300 resize-none shadow p-3 w-full"></textarea>
+
+            <button class="addMood bg-green-500 px-5 py-2 rounded-md text-white font-bold text-lg">
+                Add mood
+            </button>
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="bg-white w-full lg:w-[35vw] flex flex-col gap-4 py-5 px-4 items-center shadow-lg rounded-xl border border-gray-200">
+
+            <h1 class="text-xl md:text-2xl font-bold text-center">Daily Log</h1>
+
+            <!-- FILTERS SECTION (OUTSIDE logs) -->
+            <div class="flex flex-wrap gap-10 justify-center">
+                <button class="filter-btn bg-gradient-to-r from-stone-200 to-slate-50 border font-semibold border-gray-300 shadow-md px-5 py-1 rounded-lg" data-filter="daily">Daily</button>
+                <button class="filter-btn bg-gradient-to-r from-stone-200 to-slate-50 border font-semibold border-gray-300 shadow-md px-5 py-1 rounded-lg" data-filter="weekly">Weekly</button>
+                <button class="filter-btn bg-gradient-to-r from-stone-200 to-slate-50 border font-semibold border-gray-300 shadow-md px-5 py-1 rounded-lg" data-filter="monthly">Monthly</button>
+                <button class="filter-btn bg-gradient-to-r from-stone-200 to-slate-50 border font-semibold border-gray-300 shadow-md px-5 py-1 rounded-lg" data-filter="all">All</button>
+            </div>
+
+            <input type="date" id="calendarFilter"
+                class="mt-2 bg-white border px-3 py-1 rounded shadow w-[70%]" />
+
+            <!-- LOGS GO HERE -->
+            <div class="logs flex flex-col gap-3 w-full mt-3"></div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
