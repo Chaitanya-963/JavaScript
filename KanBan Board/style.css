@@ -1,0 +1,115 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f0f15;
+  color: #e8e8f0;
+  min-height: 100vh;
+}
+
+header {
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #2a2a3a;
+}
+
+.add-task-form {
+  display: flex;
+  gap: 8px;
+}
+
+.add-task-form input {
+  padding: 8px 14px;
+  background: #1a1a2e;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  color: #e8e8f0;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+}
+
+.add-task-form button {
+  padding: 8px 16px;
+  background: #534AB7;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  padding: 32px;
+  align-items: flex-start;
+}
+
+
+.column {
+  flex: 1;
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 300px;
+  border: 1px solid #2a2a3a;
+  transition: border-color 0.2s;
+}
+
+
+.column.drag-over {
+  border-color: #534AB7;
+  background: #1f1f38;
+}
+
+.col-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #888899;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.count {
+  background: #2a2a3a;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.task-card {
+  background: #0f0f15;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  transition: border-color 0.15s;
+}
+
+
+.task-card:hover { border-color: #534AB7; }
+.task-card.dragging { opacity: 0.4; cursor: grabbing; }
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #888899;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1;
+}
+.delete-btn:hover { color: #E24B4A; }
