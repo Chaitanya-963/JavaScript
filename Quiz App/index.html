@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div id="quiz-container">
+        <div style="background:#e0e0e0; border-radius:99px;
+            height:6px; margin-bottom:20px;">
+            <div id="progress-bar" style="height:6px; border-radius:99px;
+           background:#6c63ff; width:0%;
+           transition: width 0.4s ease;">
+            </div>
+        </div>
+        <div id="question-number">Question 1 of 10</div>
+        <h2 id="question-text">Question goes here</h2>
+
+        <div id="options-container">
+            <!-- Options will appear here via JS -->
+        </div>
+
+        <button id="next-btn" style="display:none">
+            Next Question
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
